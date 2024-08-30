@@ -75,7 +75,7 @@ jobs:
   sign-darwin:
     name: Sign PKG Darwin
     needs: [build-darwin]
-    runs-on: macos-11
+    runs-on: macos-12
     steps:
     - name: Download artifacts
       uses: actions/download-artifact@v2
@@ -102,7 +102,7 @@ jobs:
   notary-darwin:
     name: Send PKG Darwin to notary
     needs: [sign-darwin]
-    runs-on: macos-11
+    runs-on: macos-12
     steps:
     - name: Download artifacts
       uses: actions/download-artifact@v2
