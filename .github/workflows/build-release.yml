@@ -78,7 +78,7 @@ jobs:
     runs-on: macos-12
     steps:
     - name: Download artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
     - name: Import certificates - INSTALL
       uses: Apple-Actions/import-codesign-certs@v1
       with:
@@ -105,7 +105,7 @@ jobs:
     runs-on: macos-12
     steps:
     - name: Download artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
 
     - name: Upload package darwin to notary service
       env:
@@ -295,7 +295,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Download artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
 
       - name: Create changelog text
         id: changelog
@@ -420,7 +420,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Download artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
       - name: Prepare version
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
@@ -480,7 +480,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Download artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
       - name: Prepare version
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
